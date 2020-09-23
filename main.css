@@ -13,6 +13,7 @@ div.menu {
     background-color: #4d5791;
     height: 44px;
     padding: 0 40px;
+    text-align: center;
 }
 
 div.menu ul,
