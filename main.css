@@ -5,6 +5,7 @@
 body {
     font-size: 10px;
     font-family: Tahoma, Arial;
+    text-align: center;
 }
 
 div.menu {
@@ -95,12 +96,4 @@ div.hero h2 {
     .container .div.text-box {
         margin: 10px;
     }
-}
-
-h1 {
-    text-align: center;
-}
-
-nav {
-    text-align: center;
 }
