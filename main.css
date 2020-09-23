@@ -102,5 +102,6 @@ div.hero h2 {
 img{
     border: 1px solid #ddd;
     border-radius: 4px;
-    position: relative;
+    padding: 5px;
+    width: 300px;
 }
