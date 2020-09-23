@@ -14,6 +14,7 @@ div.menu {
     height: 44px;
     padding: 0 40px;
     text-align: center;
+    font-size: 10px;
 }
 
 div.menu ul,
