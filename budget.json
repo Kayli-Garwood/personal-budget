@@ -2,46 +2,65 @@
     "myBudget": [
     {
         "title": "Eat out",
-        "budget": 25
+        "value": 25,
+        "color": "#ff3333"
     },
     {
         "title": "Rent",
-        "budget": 375
+        "value": 375,
+        "color": "#ff9f33"
     },
     {
         "title": "Grocery",
-        "budget": 110
+        "value": 110,
+        "color": "#fff833"
     },
     {
         "title": "Utilities",
-        "budget": 170
+        "value": 170,
+        "color": "#87ff33"
     },
     {
         "title": "Phone bill",
-        "budget": 120
+        "value": 120,
+        "color": "#33fdff"
     },
     {
         "title": "Insurance",
-        "budget": 200
+        "value": 200,
+        "color": "#3354ff"
     },
     {
         "title": "Emergency Fund",
-        "budget": 400
+        "value": 400,
+        "color": "#ac33ff"
     },
     {
         "title": "Bank Account Fees",
-        "budget": 30
+        "value": 30,
+        "color": "#fc33ff"
     },
     {
         "title": "Prescriptions",
-        "budget": 100
+        "value": 100,
+        "color": "#ff3386"
     },
     {
         "title": "Gas",
-        "budget": 150
+        "value": 150,
+        "color": "#34ffad"
     },
     {
         "title": "Internet",
-        "budget": 60
+        "value": 60,
+        "color": "#33bdff"
     }]
 }
+
+
+
+
+
+
+
+

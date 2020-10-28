@@ -1,31 +1,56 @@
 //Budget API
 const express = require('express');
 const cors = require('cors');
+const mongoose = require('mongoose');
+const bodyParser = require('body-parser');
 const app = express();
-const port = 3000;
+const port = 5000;
+const budgetModel = require('./models/budget_schema')
+let url = 'mongodb://localhost:27017/personal_budget';
 
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 app.use(cors());
-
-const budget = {
-    myBudget: [
-        {
-            title:'Eat out',
-            budget: 25
-        },
-        {
-            title:'Rent',
-            budget: 275
-        },
-        {
-            title:'Grocery',
-            budget: 110
-        },
-    ]
-};
+app.use('/', express.static('public'));
 
 app.get('/budget', (req, res) => {
-    var budget = require("./budget.json");
-    res.json(budget);
+mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true})
+    .then(() => {
+        budgetModel.find({})
+            .then((data) => {
+                console.log(data)
+                res.json(data);
+                mongoose.connection.close();
+            })
+            .catch((connectionError) => {
+                console.log(connectionError);
+            });
+    })
+    .catch((connectionError) => {
+        console.log(connectionError)
+    });
+});
+
+app.put('/addBudget', (req, res) => {
+    mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true })
+    .then(() => {
+         newBudget = {
+             title: req.body.title,
+             value: req.body.value,
+             color: req.body.color,
+         }
+        budgetModel.insertMany(newBudget)
+            .then((data) => {
+            res.json(data);
+            mongoose.connection.close();
+        })
+        .catch((connectionError) => {
+            console.log(connectionError)
+        });
+    })
+        .catch((connectionError) => {
+            console.log(connectionError)
+    });
 });
 
 app.listen(port, () => {
